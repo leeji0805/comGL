@@ -141,8 +141,8 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
     {
     case WM_CREATE:
         // Initialize for the OpenGL rendering
-        hDeviceContext = ???????????????;
-        if (!???????????????????????????) {
+        hDeviceContext = GetDC(hWnd);
+        if (!bSetupPixelFormat(hDeviceContext)) {
             MessageBox(hWnd, "Error in setting up pixel format for OpenGL", "Error", MB_OK | MB_ICONERROR);
             DestroyWindow(hWnd);
         }
@@ -230,11 +230,11 @@ bool bSetupPixelFormat(HDC hdc)
 
     pfd.nSize = sizeof(PIXELFORMATDESCRIPTOR);
     pfd.nVersion = 1;
-    pfd.dwFlags = PFD_DRAW_TO_WINDOW | PFD_SUPPORT_OPENGL | ????????????????;
+    pfd.dwFlags = PFD_DRAW_TO_WINDOW | PFD_SUPPORT_OPENGL | PFD_DOUBLEBUFFER;
     pfd.dwLayerMask = PFD_MAIN_PLANE;
-    pfd.iPixelType = ???????????;
-    pfd.cColorBits = ????????;
-    pfd.cDepthBits = ????????;
+    pfd.iPixelType = PFD_TYPE_RGBA;
+    pfd.cColorBits = 24;
+    pfd.cDepthBits = 16;
     pfd.cAccumBits = 0;
     pfd.cStencilBits = 0;
 
@@ -256,11 +256,10 @@ void Resize(int width, int height)
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
 
-     ?????????????
-       
-     ??????????
+    glViewport(0, 0, width, height);
 
-    
+    gluOrtho2D(0, 500, 0, 500);
+
     return;
 
 }
@@ -271,15 +270,14 @@ void Resize(int width, int height)
 */
 void DrawScene(HDC MyDC)
 {
-    glEnable(??????????????);
+    glEnable(GL_DEPTH_TEST);
 
-    glClearColor(????????????????);
-    glClear(GL_COLOR_BUFFER_BIT | ??????????????????);
+    glClearColor(0.5f, 0.5f, 0.5f, 0.5f);
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
-    
-   
-    SwapBuffers(???????????????);
+    SwapBuffers(MyDC);
 
     return;
 }
