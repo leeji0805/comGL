@@ -272,12 +272,44 @@ void DrawScene(HDC MyDC)
 {
     glEnable(GL_DEPTH_TEST);
 
-    glClearColor(0.5f, 0.5f, 0.5f, 0.5f);
+    glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
+
+    glColor3f(0.0f, 1.0f, 0.0f);
+    glBegin(GL_POLYGON);
+        glVertex2f(0, 0);
+        glVertex2f(0, 100);
+        glVertex2f(100, 100);
+        glVertex2f(100, 0);
+    glEnd();
+
+    glColor3f(0.2f, 1.0f, 0.2f);
+    glBegin(GL_POLYGON);
+        glVertex2f(100,100);
+        glVertex2f(100, 200);
+        glVertex2f(200, 200);
+        glVertex2f(200, 100);
+    glEnd();
+
+    glColor3f(0.4f, 1.0f, 0.4f);
+    glBegin(GL_POLYGON);
+        glVertex2f(200, 200);
+        glVertex2f(200, 300);
+        glVertex2f(300, 300);
+        glVertex2f(300, 200);
+    glEnd();
+
+    
+   
+
+
+   
+
     SwapBuffers(MyDC);
+
+  
 
     return;
 }
