@@ -111,7 +111,7 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
    hInst = hInstance; // 인스턴스 핸들을 전역 변수에 저장합니다.
 
    HWND hWnd = CreateWindowW(szWindowClass, szTitle, WS_OVERLAPPEDWINDOW,
-       CW_USEDEFAULT, 0, CW_USEDEFAULT, 0, nullptr, nullptr, hInstance, nullptr);
+       CW_USEDEFAULT, CW_USEDEFAULT, 800, 600, nullptr, nullptr, hInstance, nullptr);
 
    if (!hWnd)
    {
@@ -258,8 +258,10 @@ void Resize(int width, int height)
 
     glViewport(0, 0, width, height);
 
-    gluOrtho2D(0, 500, 0, 500);
-
+    if (width<=height)
+        gluOrtho2D(0, 500*(GLfloat)height / (GLfloat)width, 0, 500);
+    else
+        gluOrtho2D(0, 500* (GLfloat)width / (GLfloat)height, 0, 500);
     return;
 
 }
@@ -277,31 +279,56 @@ void DrawScene(HDC MyDC)
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
 
-    glColor3f(0.0f, 1.0f, 0.0f);
-    glBegin(GL_POLYGON);
+ 
+    /*
+    glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+    glBegin(GL_QUAD_STRIP);
+    glColor3f(0.0f, 0.0f, 0.0f);
         glVertex2f(0, 0);
         glVertex2f(0, 100);
-        glVertex2f(100, 100);
         glVertex2f(100, 0);
-    glEnd();
-
-    glColor3f(0.2f, 1.0f, 0.2f);
-    glBegin(GL_POLYGON);
+        glVertex2f(100, 100);
+    
         glVertex2f(100,100);
         glVertex2f(100, 200);
-        glVertex2f(200, 200);
         glVertex2f(200, 100);
-    glEnd();
-
-    glColor3f(0.4f, 1.0f, 0.4f);
-    glBegin(GL_POLYGON);
         glVertex2f(200, 200);
-        glVertex2f(200, 300);
-        glVertex2f(300, 300);
-        glVertex2f(300, 200);
-    glEnd();
-
     
+        glVertex2f(200, 200);    
+        glVertex2f(200, 300);    
+        glVertex2f(300, 200);
+        glVertex2f(300, 300);
+    glEnd();
+    glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+    glBegin(GL_QUAD_STRIP);
+    glColor3f(0.0f, 0.0f, 0.0f);
+    glVertex2f(0, 0);
+    glColor3f(0.0f, 1.0f, 0.0f);
+    glVertex2f(0, 100);
+    glColor3f(0.0f, 0.0f, 1.0f);
+    glVertex2f(100, 0);
+    glColor3f(1.0f, 0.0f, 0.0f);
+    glVertex2f(100, 100);
+
+    glColor3f(1.0f, 0.0f, 0.0f);
+    glVertex2f(100, 100);
+    glColor3f(0.0f, 0.0f, 0.0f);
+    glVertex2f(100, 200);
+    glColor3f(0.0f, 1.0f, 0.0f);
+    glVertex2f(200, 100);
+    glColor3f(0.0f, 0.0f, 1.0f);
+    glVertex2f(200, 200);
+
+    glColor3f(0.0f, 0.0f, 1.0f);
+    glVertex2f(200, 200);
+    glColor3f(0.0f, 0.0f, 0.0f);
+    glVertex2f(200, 300);
+    glColor3f(1.0f, 0.0f, 0.0f);
+    glVertex2f(300, 200);
+    glColor3f(0.0f, 1.0f, 0.0f);
+    glVertex2f(300, 300);
+    glEnd();
+    */
    
 
 
