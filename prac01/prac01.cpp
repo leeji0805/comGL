@@ -2,6 +2,9 @@
 //
 // 2023. 3. 11.
 // Created by Soo Kyun Kim
+#define _USE_MATH_DEFINES
+
+#include <math.h>
 
 #include "framework.h"
 #include "prac01.h"
@@ -15,7 +18,19 @@
 HINSTANCE hInst;                                // 현재 인스턴스입니다.
 WCHAR szTitle[MAX_LOADSTRING];                  // 제목 표시줄 텍스트입니다.
 WCHAR szWindowClass[MAX_LOADSTRING];            // 기본 창 클래스 이름입니다.
+//-----------------------------------------------------
+double x = 2;
+double y = 2;
+double z = 2;
+double xa = 0;
+double ya = 0;
+double za = 0;
+double deg2rad(const float deg) {
+    return deg * M_PI / 180;
+}
 
+
+//-----------------------------------------------------
 /////////////////////// sk
 HDC hDeviceContext;								// current device context
 HGLRC hRenderingContext;						// current rendering context
@@ -23,6 +38,39 @@ HGLRC hRenderingContext;						// current rendering context
 bool bSetupPixelFormat(HDC hdc);
 void Resize(int width, int height);
 void DrawScene(HDC MyDC);
+
+
+//-----------------------------------------------------
+GLfloat vertices[8][3] = {
+    { -1.0f, -1.0f,  1.0f }, { -1.0f,  1.0f,  1.0f },
+    {  1.0f,  1.0f,  1.0f }, {  1.0f, -1.0f,  1.0f },
+    { -1.0f, -1.0f, -1.0f }, { -1.0f,  1.0f, -1.0f },
+    {  1.0f,  1.0f, -1.0f }, {  1.0f, -1.0f, -1.0f } };
+GLfloat colors[8][3] = {
+    { 0.0f, 0.0f, 1.0f }, { 0.0f, 1.0f, 1.0f },
+    { 1.0f, 1.0f, 1.0f }, { 1.0f, 0.0f, 1.0f },
+    { 0.0f, 0.0f, 0.0f }, { 0.0f, 1.0f, 0.0f },
+    { 1.0f, 1.0f, 0.0f }, { 1.0f, 0.0f, 0.0f } };
+
+void Quad(int a, int b, int c, int d);
+//-----------------------------------------------------
+
+
+void Quad(int a, int b, int c, int d)
+{
+    glBegin(GL_QUADS);
+    glColor3fv(colors[a]);
+    glVertex3fv(vertices[a]);
+    glColor3fv(colors[b]);
+    glVertex3fv(vertices[b]);
+    glColor3fv(colors[c]);
+    glVertex3fv(vertices[c]);
+    glColor3fv(colors[d]);
+    glVertex3fv(vertices[d]);
+    glEnd();
+
+    return;
+}
 
 // 이 코드 모듈에 포함된 함수의 선언을 전달합니다:
 ATOM                MyRegisterClass(HINSTANCE hInstance);
@@ -156,6 +204,34 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
         InvalidateRect(hWnd, NULL, false);
 
         break;
+
+    case WM_KEYDOWN:
+        if (wParam == VK_LEFT) {
+            xa = xa + 15;
+            za = za + 15;
+            x = (cos(deg2rad(xa)) * 4);
+            z = (sin(deg2rad(za)) * 4);
+            
+        }
+        if (wParam == VK_RIGHT) {
+            xa = xa - 15;
+            za = za - 15;
+            x = (cos(deg2rad(xa)) * 4);
+            z = (sin(deg2rad(za)) * 4);
+        }
+        if (wParam == VK_DOWN) {
+            ya = ya + 15;
+            za = za + 15;
+            z = (cos(deg2rad(za)) * 4);
+            y = (sin(deg2rad(za)) * -4);
+            
+        
+        }
+        if (wParam == VK_UP) {
+            y = y + 0.5;
+        }
+        InvalidateRect(hWnd, NULL, false);
+        break;
         /*
     case WM_COMMAND:
         {
@@ -258,10 +334,14 @@ void Resize(int width, int height)
 
     glViewport(0, 0, width, height);
 
-    if (width<=height)
-        gluOrtho2D(0, 500*(GLfloat)height / (GLfloat)width, 0, 500);
+    if (width <= height)
+        //gluOrtho2D(0, 500, 0, 500 * (GLfloat)width / (GLfloat)height);
+        glFrustum(-2.0, 2.0, -2.0 * (GLfloat)height / (GLfloat)width, 2.0 * (GLfloat)height / (GLfloat)width, 1.0, 10.0);
+
+
     else
-        gluOrtho2D(0, 500* (GLfloat)width / (GLfloat)height, 0, 500);
+        //gluOrtho2D(0, 500 * (GLfloat)width / (GLfloat)height, 0, 500);
+        glFrustum(-2.0 * (GLfloat)width / (GLfloat)height, 2.0 * (GLfloat)width / (GLfloat)height, -2.0, 2.0, 1.0, 10.0);
     return;
 
 }
@@ -278,61 +358,17 @@ void DrawScene(HDC MyDC)
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
-
- 
-    /*
-    glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-    glBegin(GL_QUAD_STRIP);
-    glColor3f(0.0f, 0.0f, 0.0f);
-        glVertex2f(0, 0);
-        glVertex2f(0, 100);
-        glVertex2f(100, 0);
-        glVertex2f(100, 100);
     
-        glVertex2f(100,100);
-        glVertex2f(100, 200);
-        glVertex2f(200, 100);
-        glVertex2f(200, 200);
-    
-        glVertex2f(200, 200);    
-        glVertex2f(200, 300);    
-        glVertex2f(300, 200);
-        glVertex2f(300, 300);
-    glEnd();
-    glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
-    glBegin(GL_QUAD_STRIP);
-    glColor3f(0.0f, 0.0f, 0.0f);
-    glVertex2f(0, 0);
-    glColor3f(0.0f, 1.0f, 0.0f);
-    glVertex2f(0, 100);
-    glColor3f(0.0f, 0.0f, 1.0f);
-    glVertex2f(100, 0);
-    glColor3f(1.0f, 0.0f, 0.0f);
-    glVertex2f(100, 100);
-
-    glColor3f(1.0f, 0.0f, 0.0f);
-    glVertex2f(100, 100);
-    glColor3f(0.0f, 0.0f, 0.0f);
-    glVertex2f(100, 200);
-    glColor3f(0.0f, 1.0f, 0.0f);
-    glVertex2f(200, 100);
-    glColor3f(0.0f, 0.0f, 1.0f);
-    glVertex2f(200, 200);
-
-    glColor3f(0.0f, 0.0f, 1.0f);
-    glVertex2f(200, 200);
-    glColor3f(0.0f, 0.0f, 0.0f);
-    glVertex2f(200, 300);
-    glColor3f(1.0f, 0.0f, 0.0f);
-    glVertex2f(300, 200);
-    glColor3f(0.0f, 1.0f, 0.0f);
-    glVertex2f(300, 300);
-    glEnd();
-    */
-   
+    gluLookAt(x, y, z, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0);
 
 
-   
+    Quad(0, 3, 2, 1);
+    Quad(1, 2, 6, 5);
+    Quad(2, 3, 7, 6);
+    Quad(3, 0, 4, 7);
+    Quad(4, 5, 6, 7);
+    Quad(5, 4, 0, 1);
+
 
     SwapBuffers(MyDC);
 
