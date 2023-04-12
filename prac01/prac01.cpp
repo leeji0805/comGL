@@ -3,14 +3,6 @@
 // 2023. 3. 11.
 // Created by Soo Kyun Kim
 #define _USE_MATH_DEFINES
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-
-#include <math.h>
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 
 #include "framework.h"
 #include "prac01.h"
@@ -25,24 +17,7 @@
 HINSTANCE hInst;                                // 현재 인스턴스입니다.
 WCHAR szTitle[MAX_LOADSTRING];                  // 제목 표시줄 텍스트입니다.
 WCHAR szWindowClass[MAX_LOADSTRING];            // 기본 창 클래스 이름입니다.
-//-----------------------------------------------------
-double x = 2;
-double y = 2;
-double z = 2;
-double xa = 0;
-double ya = 0;
-double za = 0;
-double deg2rad(const float deg) {
-    return deg * M_PI / 180;
-}
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-
-//-----------------------------------------------------
-=======
-=======
->>>>>>> Stashed changes
 //----------------------------
 double deg2rad(const float deg) {
     return deg * M_PI / 180;
@@ -50,10 +25,6 @@ double deg2rad(const float deg) {
 
 //----------------------------
 
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 /////////////////////// sk
 HDC hDeviceContext;								// current device context
 HGLRC hRenderingContext;						// current rendering context
@@ -61,39 +32,6 @@ HGLRC hRenderingContext;						// current rendering context
 bool bSetupPixelFormat(HDC hdc);
 void Resize(int width, int height);
 void DrawScene(HDC MyDC);
-
-
-//-----------------------------------------------------
-GLfloat vertices[8][3] = {
-    { -1.0f, -1.0f,  1.0f }, { -1.0f,  1.0f,  1.0f },
-    {  1.0f,  1.0f,  1.0f }, {  1.0f, -1.0f,  1.0f },
-    { -1.0f, -1.0f, -1.0f }, { -1.0f,  1.0f, -1.0f },
-    {  1.0f,  1.0f, -1.0f }, {  1.0f, -1.0f, -1.0f } };
-GLfloat colors[8][3] = {
-    { 0.0f, 0.0f, 1.0f }, { 0.0f, 1.0f, 1.0f },
-    { 1.0f, 1.0f, 1.0f }, { 1.0f, 0.0f, 1.0f },
-    { 0.0f, 0.0f, 0.0f }, { 0.0f, 1.0f, 0.0f },
-    { 1.0f, 1.0f, 0.0f }, { 1.0f, 0.0f, 0.0f } };
-
-void Quad(int a, int b, int c, int d);
-//-----------------------------------------------------
-
-
-void Quad(int a, int b, int c, int d)
-{
-    glBegin(GL_QUADS);
-    glColor3fv(colors[a]);
-    glVertex3fv(vertices[a]);
-    glColor3fv(colors[b]);
-    glVertex3fv(vertices[b]);
-    glColor3fv(colors[c]);
-    glVertex3fv(vertices[c]);
-    glColor3fv(colors[d]);
-    glVertex3fv(vertices[d]);
-    glEnd();
-
-    return;
-}
 
 // 이 코드 모듈에 포함된 함수의 선언을 전달합니다:
 ATOM                MyRegisterClass(HINSTANCE hInstance);
@@ -182,15 +120,7 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
    hInst = hInstance; // 인스턴스 핸들을 전역 변수에 저장합니다.
 
    HWND hWnd = CreateWindowW(szWindowClass, szTitle, WS_OVERLAPPEDWINDOW,
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-       CW_USEDEFAULT, CW_USEDEFAULT, 800, 600, nullptr, nullptr, hInstance, nullptr);
-=======
        CW_USEDEFAULT, 0, 500, 500, nullptr, nullptr, hInstance, nullptr);
->>>>>>> Stashed changes
-=======
-       CW_USEDEFAULT, 0, 500, 500, nullptr, nullptr, hInstance, nullptr);
->>>>>>> Stashed changes
 
    if (!hWnd)
    {
@@ -232,35 +162,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
     case WM_SIZE:
         GetClientRect(hWnd, &clientRect);
         Resize(clientRect.right, clientRect.bottom);
-        InvalidateRect(hWnd, NULL, false);
-
-        break;
-
-    case WM_KEYDOWN:
-        if (wParam == VK_LEFT) {
-            xa = xa + 15;
-            za = za + 15;
-            x = (cos(deg2rad(xa)) * 4);
-            z = (sin(deg2rad(za)) * 4);
-            
-        }
-        if (wParam == VK_RIGHT) {
-            xa = xa - 15;
-            za = za - 15;
-            x = (cos(deg2rad(xa)) * 4);
-            z = (sin(deg2rad(za)) * 4);
-        }
-        if (wParam == VK_DOWN) {
-            ya = ya + 15;
-            za = za + 15;
-            z = (cos(deg2rad(za)) * 4);
-            y = (sin(deg2rad(za)) * -4);
-            
-        
-        }
-        if (wParam == VK_UP) {
-            y = y + 0.5;
-        }
         InvalidateRect(hWnd, NULL, false);
         break;
         /*
@@ -366,14 +267,6 @@ void Resize(int width, int height)
     glViewport(0, 0, width, height);
 
     if (width <= height)
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-        //gluOrtho2D(0, 500, 0, 500 * (GLfloat)width / (GLfloat)height);
-        glFrustum(-2.0, 2.0, -2.0 * (GLfloat)height / (GLfloat)width, 2.0 * (GLfloat)height / (GLfloat)width, 1.0, 10.0);
-=======
-        gluOrtho2D(0, 500, 0, 500 * (GLfloat)width / (GLfloat)height);
-        //glFrustum(-2.0, 2.0, -2.0 * (GLfloat)height / (GLfloat)width, 2.0 * (GLfloat)height / (GLfloat)width, 1.0, 10.0);
-=======
         gluOrtho2D(0, 500, 0, 500 * (GLfloat)width / (GLfloat)height);
         //glFrustum(-2.0, 2.0, -2.0 * (GLfloat)height / (GLfloat)width, 2.0 * (GLfloat)height / (GLfloat)width, 1.0, 10.0);
 
@@ -382,20 +275,7 @@ void Resize(int width, int height)
         gluOrtho2D(0, 500 * (GLfloat)width / (GLfloat)height, 0, 500);
         //glFrustum(-2.0 * (GLfloat)width / (GLfloat)height, 2.0 * (GLfloat)width / (GLfloat)height, -2.0, 2.0, 1.0, 10.0);
     return;
->>>>>>> Stashed changes
 
-
-    else
-        gluOrtho2D(0, 500 * (GLfloat)width / (GLfloat)height, 0, 500);
-        //glFrustum(-2.0 * (GLfloat)width / (GLfloat)height, 2.0 * (GLfloat)width / (GLfloat)height, -2.0, 2.0, 1.0, 10.0);
-    return;
->>>>>>> Stashed changes
-
-
-    else
-        //gluOrtho2D(0, 500 * (GLfloat)width / (GLfloat)height, 0, 500);
-        glFrustum(-2.0 * (GLfloat)width / (GLfloat)height, 2.0 * (GLfloat)width / (GLfloat)height, -2.0, 2.0, 1.0, 10.0);
-    return;
 
 }
 
@@ -411,20 +291,12 @@ void DrawScene(HDC MyDC)
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
-<<<<<<< Updated upstream
-    
-    gluLookAt(x, y, z, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0);
-=======
 
     glColor3f(0.0f, 1.0f, 0.0f);
     glBegin(GL_LINE_STRIP);
     
     glVertex2f(cos(deg2rad(90)) * 100 + 250, sin(deg2rad(90)) * 100 + 250);
     glVertex2f(cos(deg2rad(234)) * 100 + 250, sin(deg2rad(234)) * 100 + 250);
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 
     glVertex2f(cos(deg2rad(234)) * 100 + 250, sin(deg2rad(234)) * 100 + 250);
     glVertex2f(cos(deg2rad(378)) * 100 + 250, sin(deg2rad(378)) * 100 + 250);
@@ -448,18 +320,7 @@ void DrawScene(HDC MyDC)
    // glVertex2f(cos(deg2rad(162)) * 100 + 250, sin(deg2rad(162)) * 100 + 250);
    // glVertex2f(cos(deg2rad(234)) * 100 + 250, sin(deg2rad(234)) * 100 + 250);
    // glVertex2f(cos(deg2rad(306)) * 100 + 250, sin(deg2rad(306)) * 100 + 250);
-   // glVertex2f(cos(deg2rad(378)) * 100 + 250, sin(deg2rad(378)) * 100 + 250);
-<<<<<<< Updated upstream
-
-    Quad(0, 3, 2, 1);
-    Quad(1, 2, 6, 5);
-    Quad(2, 3, 7, 6);
-    Quad(3, 0, 4, 7);
-    Quad(4, 5, 6, 7);
-    Quad(5, 4, 0, 1);
-=======
->>>>>>> Stashed changes
-
+   
 
     SwapBuffers(MyDC);
 

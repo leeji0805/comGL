@@ -1,5 +1,6 @@
 ﻿  prac01.cpp
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(6,1): error C2059: 구문 오류: '<<'
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.29.30133\include\sal.h(2361,12): error C2143: 구문 오류: ';'이(가) '{' 앞에 없습니다.
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.29.30133\include\sal.h(2361,12): error C2447: '{': 함수 헤더가 없습니다. 이전 스타일의 형식 목록입니까?
@@ -66,6 +67,8 @@ C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(412,39): 
 C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(417,69): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(417,39): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 =======
+=======
+>>>>>>> Stashed changes
 C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(300,69): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(300,39): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(301,71): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
@@ -89,4 +92,7 @@ C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(313,39): 
 C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(318,69): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(318,39): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   prac01.vcxproj -> C:\Users\lee\OneDrive - 제주대학교\문서\comGL\Debug\prac01.exe
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
