@@ -3,13 +3,20 @@
 // 2023. 3. 11.
 // Created by Soo Kyun Kim
 #define _USE_MATH_DEFINES
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
 #include <math.h>
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 
 #include "framework.h"
 #include "prac01.h"
 #include "gl/gl.h"
 #include "gl/glu.h"
+#include <math.h>
 
 
 #define MAX_LOADSTRING 100
@@ -29,8 +36,24 @@ double deg2rad(const float deg) {
     return deg * M_PI / 180;
 }
 
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
 //-----------------------------------------------------
+=======
+=======
+>>>>>>> Stashed changes
+//----------------------------
+double deg2rad(const float deg) {
+    return deg * M_PI / 180;
+}
+
+//----------------------------
+
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 /////////////////////// sk
 HDC hDeviceContext;								// current device context
 HGLRC hRenderingContext;						// current rendering context
@@ -159,7 +182,15 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
    hInst = hInstance; // 인스턴스 핸들을 전역 변수에 저장합니다.
 
    HWND hWnd = CreateWindowW(szWindowClass, szTitle, WS_OVERLAPPEDWINDOW,
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
        CW_USEDEFAULT, CW_USEDEFAULT, 800, 600, nullptr, nullptr, hInstance, nullptr);
+=======
+       CW_USEDEFAULT, 0, 500, 500, nullptr, nullptr, hInstance, nullptr);
+>>>>>>> Stashed changes
+=======
+       CW_USEDEFAULT, 0, 500, 500, nullptr, nullptr, hInstance, nullptr);
+>>>>>>> Stashed changes
 
    if (!hWnd)
    {
@@ -335,8 +366,30 @@ void Resize(int width, int height)
     glViewport(0, 0, width, height);
 
     if (width <= height)
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
         //gluOrtho2D(0, 500, 0, 500 * (GLfloat)width / (GLfloat)height);
         glFrustum(-2.0, 2.0, -2.0 * (GLfloat)height / (GLfloat)width, 2.0 * (GLfloat)height / (GLfloat)width, 1.0, 10.0);
+=======
+        gluOrtho2D(0, 500, 0, 500 * (GLfloat)width / (GLfloat)height);
+        //glFrustum(-2.0, 2.0, -2.0 * (GLfloat)height / (GLfloat)width, 2.0 * (GLfloat)height / (GLfloat)width, 1.0, 10.0);
+=======
+        gluOrtho2D(0, 500, 0, 500 * (GLfloat)width / (GLfloat)height);
+        //glFrustum(-2.0, 2.0, -2.0 * (GLfloat)height / (GLfloat)width, 2.0 * (GLfloat)height / (GLfloat)width, 1.0, 10.0);
+
+
+    else
+        gluOrtho2D(0, 500 * (GLfloat)width / (GLfloat)height, 0, 500);
+        //glFrustum(-2.0 * (GLfloat)width / (GLfloat)height, 2.0 * (GLfloat)width / (GLfloat)height, -2.0, 2.0, 1.0, 10.0);
+    return;
+>>>>>>> Stashed changes
+
+
+    else
+        gluOrtho2D(0, 500 * (GLfloat)width / (GLfloat)height, 0, 500);
+        //glFrustum(-2.0 * (GLfloat)width / (GLfloat)height, 2.0 * (GLfloat)width / (GLfloat)height, -2.0, 2.0, 1.0, 10.0);
+    return;
+>>>>>>> Stashed changes
 
 
     else
@@ -358,9 +411,45 @@ void DrawScene(HDC MyDC)
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
+<<<<<<< Updated upstream
     
     gluLookAt(x, y, z, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0);
+=======
 
+    glColor3f(0.0f, 1.0f, 0.0f);
+    glBegin(GL_LINE_STRIP);
+    
+    glVertex2f(cos(deg2rad(90)) * 100 + 250, sin(deg2rad(90)) * 100 + 250);
+    glVertex2f(cos(deg2rad(234)) * 100 + 250, sin(deg2rad(234)) * 100 + 250);
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+
+    glVertex2f(cos(deg2rad(234)) * 100 + 250, sin(deg2rad(234)) * 100 + 250);
+    glVertex2f(cos(deg2rad(378)) * 100 + 250, sin(deg2rad(378)) * 100 + 250);
+
+    glVertex2f(cos(deg2rad(378)) * 100 + 250, sin(deg2rad(378)) * 100 + 250);
+    glVertex2f(cos(deg2rad(162)) * 100 + 250, sin(deg2rad(162)) * 100 + 250);
+
+    glVertex2f(cos(deg2rad(162)) * 100 + 250, sin(deg2rad(162)) * 100 + 250);
+    glVertex2f(cos(deg2rad(306)) * 100 + 250, sin(deg2rad(306)) * 100 + 250);
+
+    glVertex2f(cos(deg2rad(306)) * 100 + 250, sin(deg2rad(306)) * 100 + 250);
+    glVertex2f(cos(deg2rad(90)) * 100 + 250, sin(deg2rad(90)) * 100 + 250);
+    glEnd();
+
+    glColor3f(0.0f, 0.0f, 0.0f);
+    glBegin(GL_POINTS);
+    glVertex2f(cos(deg2rad(90)) * 100 + 250, sin(deg2rad(90)) * 100 + 250);
+    glEnd();
+
+   // glVertex2f(cos(deg2rad(90)) * 100 + 250, sin(deg2rad(90)) * 100 + 250);
+   // glVertex2f(cos(deg2rad(162)) * 100 + 250, sin(deg2rad(162)) * 100 + 250);
+   // glVertex2f(cos(deg2rad(234)) * 100 + 250, sin(deg2rad(234)) * 100 + 250);
+   // glVertex2f(cos(deg2rad(306)) * 100 + 250, sin(deg2rad(306)) * 100 + 250);
+   // glVertex2f(cos(deg2rad(378)) * 100 + 250, sin(deg2rad(378)) * 100 + 250);
+<<<<<<< Updated upstream
 
     Quad(0, 3, 2, 1);
     Quad(1, 2, 6, 5);
@@ -368,6 +457,8 @@ void DrawScene(HDC MyDC)
     Quad(3, 0, 4, 7);
     Quad(4, 5, 6, 7);
     Quad(5, 4, 0, 1);
+=======
+>>>>>>> Stashed changes
 
 
     SwapBuffers(MyDC);

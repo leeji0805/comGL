@@ -1,8 +1,92 @@
 ﻿  prac01.cpp
-C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(212,30): warning C4244: '인수': 'double'에서 'const float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(213,30): warning C4244: '인수': 'double'에서 'const float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(219,30): warning C4244: '인수': 'double'에서 'const float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(220,30): warning C4244: '인수': 'double'에서 'const float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(225,30): warning C4244: '인수': 'double'에서 'const float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(226,30): warning C4244: '인수': 'double'에서 'const float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+<<<<<<< Updated upstream
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(6,1): error C2059: 구문 오류: '<<'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.29.30133\include\sal.h(2361,12): error C2143: 구문 오류: ';'이(가) '{' 앞에 없습니다.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.29.30133\include\sal.h(2361,12): error C2447: '{': 함수 헤더가 없습니다. 이전 스타일의 형식 목록입니까?
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(9,1): error C2059: 구문 오류: '=='
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.29.30133\include\excpt.h(17,1): error C2143: 구문 오류: ';'이(가) '{' 앞에 없습니다.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.29.30133\include\excpt.h(17,1): error C2447: '{': 함수 헤더가 없습니다. 이전 스타일의 형식 목록입니까?
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\winnt.h(1409,1): error C2143: 구문 오류: ';'이(가) '__stdcall' 앞에 없습니다.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\winnt.h(1409,1): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\winnt.h(1414,6): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\winnt.h(1417,27): error C2143: 구문 오류: ';'이(가) '*' 앞에 없습니다.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\winnt.h(1417,27): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\winnt.h(1417,9): error C2365: 'EXCEPTION_ROUTINE': 재정의: 이전 정의는 '함수'입니다.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\winnt.h(1410): message : 'EXCEPTION_ROUTINE' 선언을 참조하십시오.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\winnt.h(1417,46): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\winnt.h(11479,24): error C3646: 'Handler': 알 수 없는 재정의 지정자입니다.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\winnt.h(11479,31): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(36,1): error C2059: 구문 오류: '<<'
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(41,33): error C2143: 구문 오류: ';'이(가) '{' 앞에 없습니다.
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(41,33): error C2447: '{': 함수 헤더가 없습니다. 이전 스타일의 형식 목록입니까?
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(47,1): error C2059: 구문 오류: '>>'
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(175,1): error C2059: 구문 오류: '<<'
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(178,1): error C2059: 구문 오류: '=='
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(179,72): error C2059: 구문 오류: ')'
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(180,1): error C2059: 구문 오류: '>>'
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(183,4): error C2143: 구문 오류: ';'이(가) '{' 앞에 없습니다.
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(210,9): error C2065: 'hDeviceContext': 선언되지 않은 식별자입니다.
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(211,32): error C2065: 'hDeviceContext': 선언되지 않은 식별자입니다.
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(215,46): error C2065: 'hDeviceContext': 선언되지 않은 식별자입니다.
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(216,24): error C2065: 'hDeviceContext': 선언되지 않은 식별자입니다.
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(230,30): warning C4244: '인수': 'double'에서 'const float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(231,30): warning C4244: '인수': 'double'에서 'const float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(237,30): warning C4244: '인수': 'double'에서 'const float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(238,30): warning C4244: '인수': 'double'에서 'const float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(243,30): warning C4244: '인수': 'double'에서 'const float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(244,30): warning C4244: '인수': 'double'에서 'const float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(274,19): error C2065: 'hDeviceContext': 선언되지 않은 식별자입니다.
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(289,13): error C2065: 'hDeviceContext': 선언되지 않은 식별자입니다.
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(290,29): error C2065: 'hDeviceContext': 선언되지 않은 식별자입니다.
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(356,1): error C2059: 구문 오류: '<<'
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(359,1): error C2059: 구문 오류: '=='
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(364,5): error C2181: if와 짝을 이루지 않는 잘못된 else문입니다.
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(368,1): error C2059: 구문 오류: '>>'
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(390,1): error C2059: 구문 오류: '<<'
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(393,1): error C2059: 구문 오류: '=='
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(398,69): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(398,39): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(399,71): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(399,40): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(400,1): error C2059: 구문 오류: '>>'
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(403,71): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(403,40): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(405,71): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(405,40): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(406,71): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(406,40): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(408,71): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(408,40): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(409,71): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(409,40): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(411,71): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(411,40): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(412,69): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(412,39): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(417,69): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(417,39): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+=======
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(300,69): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(300,39): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(301,71): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(301,40): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(303,71): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(303,40): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(304,71): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(304,40): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(306,71): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(306,40): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(307,71): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(307,40): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(309,71): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(309,40): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(310,71): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(310,40): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(312,71): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(312,40): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(313,69): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(313,39): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(318,69): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\lee\OneDrive - 제주대학교\문서\comGL\prac01\prac01.cpp(318,39): warning C4244: '인수': 'double'에서 'GLfloat'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   prac01.vcxproj -> C:\Users\lee\OneDrive - 제주대학교\문서\comGL\Debug\prac01.exe
+>>>>>>> Stashed changes
