@@ -293,6 +293,18 @@ void DrawScene(HDC MyDC)
     glLoadIdentity();
 
     glColor3f(0.0f, 1.0f, 0.0f);
+
+    glPointSize(5.0);
+    glColor3f(0.0f, 0.0f, 0.0f);
+    glBegin(GL_POINTS);
+    glVertex2f(cos(deg2rad(90)) * 100 + 250, sin(deg2rad(90)) * 100 + 250);
+    glVertex2f(cos(deg2rad(162)) * 100 + 250, sin(deg2rad(162)) * 100 + 250);
+    glVertex2f(cos(deg2rad(234)) * 100 + 250, sin(deg2rad(234)) * 100 + 250);
+    glVertex2f(cos(deg2rad(306)) * 100 + 250, sin(deg2rad(306)) * 100 + 250);
+    glVertex2f(cos(deg2rad(378)) * 100 + 250, sin(deg2rad(378)) * 100 + 250);
+    glEnd();
+
+    /*glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
     glBegin(GL_LINE_STRIP);
     
     glVertex2f(cos(deg2rad(90)) * 100 + 250, sin(deg2rad(90)) * 100 + 250);
@@ -309,17 +321,52 @@ void DrawScene(HDC MyDC)
 
     glVertex2f(cos(deg2rad(306)) * 100 + 250, sin(deg2rad(306)) * 100 + 250);
     glVertex2f(cos(deg2rad(90)) * 100 + 250, sin(deg2rad(90)) * 100 + 250);
-    glEnd();
+    glEnd();*/
+    
+    glColor3f(0.2f, 1.0f, 0.2f);
+    glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+    glBegin(GL_LINE_LOOP);
 
-    glColor3f(0.0f, 0.0f, 0.0f);
-    glBegin(GL_POINTS);
     glVertex2f(cos(deg2rad(90)) * 100 + 250, sin(deg2rad(90)) * 100 + 250);
+    glVertex2f(cos(deg2rad(234)) * 100 + 250, sin(deg2rad(234)) * 100 + 250);
+    glVertex2f(cos(deg2rad(378)) * 100 + 250, sin(deg2rad(378)) * 100 + 250);
+    glVertex2f(cos(deg2rad(162)) * 100 + 250, sin(deg2rad(162)) * 100 + 250);
+    glVertex2f(cos(deg2rad(306)) * 100 + 250, sin(deg2rad(306)) * 100 + 250);
+    
     glEnd();
 
-   // glVertex2f(cos(deg2rad(90)) * 100 + 250, sin(deg2rad(90)) * 100 + 250);
-   // glVertex2f(cos(deg2rad(162)) * 100 + 250, sin(deg2rad(162)) * 100 + 250);
-   // glVertex2f(cos(deg2rad(234)) * 100 + 250, sin(deg2rad(234)) * 100 + 250);
-   // glVertex2f(cos(deg2rad(306)) * 100 + 250, sin(deg2rad(306)) * 100 + 250);
+    /*
+    glColor3f(1.0f, 1.0f, 0.0f);
+    glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+    glBegin(GL_POLYGON);
+    glVertex2f(cos(deg2rad(90)) * 100 + 250, sin(deg2rad(90)) * 100 + 250);
+    glVertex2f(cos(deg2rad(162)) * 100 + 250, sin(deg2rad(162)) * 100 + 250);
+    glVertex2f(cos(deg2rad(234)) * 100 + 250, sin(deg2rad(234)) * 100 + 250);
+    glVertex2f(cos(deg2rad(306)) * 100 + 250, sin(deg2rad(306)) * 100 + 250);
+    glVertex2f(cos(deg2rad(378)) * 100 + 250, sin(deg2rad(378)) * 100 + 250);
+    glEnd();
+
+    glColor3f(0.2f, 1.0f, 0.2f);
+    glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+    glBegin(GL_POLYGON);
+    glVertex2f(cos(deg2rad(90)) * 100 + 250, sin(deg2rad(90)) * 100 + 250);
+    glVertex2f(cos(deg2rad(162)) * 100 + 250, sin(deg2rad(162)) * 100 + 250);
+    glVertex2f(cos(deg2rad(234)) * 100 + 250, sin(deg2rad(234)) * 100 + 250);
+    glVertex2f(cos(deg2rad(306)) * 100 + 250, sin(deg2rad(306)) * 100 + 250);
+    glVertex2f(cos(deg2rad(378)) * 100 + 250, sin(deg2rad(378)) * 100 + 250);
+    glEnd();
+
+    
+    */
+
+
+    
+
+   /* glVertex2f(cos(deg2rad(90)) * 100 + 250, sin(deg2rad(90)) * 100 + 250);
+    glVertex2f(cos(deg2rad(162)) * 100 + 250, sin(deg2rad(162)) * 100 + 250);
+    glVertex2f(cos(deg2rad(234)) * 100 + 250, sin(deg2rad(234)) * 100 + 250);
+    glVertex2f(cos(deg2rad(306)) * 100 + 250, sin(deg2rad(306)) * 100 + 250);
+    glVertex2f(cos(deg2rad(378)) * 100 + 250, sin(deg2rad(378)) * 100 + 250);*/
    
 
     SwapBuffers(MyDC);
