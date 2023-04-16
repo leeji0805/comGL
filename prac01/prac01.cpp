@@ -294,6 +294,7 @@ void DrawScene(HDC MyDC)
 
     glColor3f(0.0f, 1.0f, 0.0f);
 
+    //기본이 될 포인트 만들기 
     glPointSize(5.0);
     glColor3f(0.0f, 0.0f, 0.0f);
     glBegin(GL_POINTS);
@@ -304,7 +305,9 @@ void DrawScene(HDC MyDC)
     glVertex2f(cos(deg2rad(378)) * 100 + 250, sin(deg2rad(378)) * 100 + 250);
     glEnd();
 
-    /*glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+    //별그리기 1: GL_LINE_STRIP을 사용
+   /* glColor3f(1.0f, 0.0f, 0.0f);
+    glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
     glBegin(GL_LINE_STRIP);
     
     glVertex2f(cos(deg2rad(90)) * 100 + 250, sin(deg2rad(90)) * 100 + 250);
@@ -321,43 +324,47 @@ void DrawScene(HDC MyDC)
 
     glVertex2f(cos(deg2rad(306)) * 100 + 250, sin(deg2rad(306)) * 100 + 250);
     glVertex2f(cos(deg2rad(90)) * 100 + 250, sin(deg2rad(90)) * 100 + 250);
-    glEnd();*/
-    
-    glColor3f(0.2f, 1.0f, 0.2f);
-    glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-    glBegin(GL_LINE_LOOP);
-
-    glVertex2f(cos(deg2rad(90)) * 100 + 250, sin(deg2rad(90)) * 100 + 250);
-    glVertex2f(cos(deg2rad(234)) * 100 + 250, sin(deg2rad(234)) * 100 + 250);
-    glVertex2f(cos(deg2rad(378)) * 100 + 250, sin(deg2rad(378)) * 100 + 250);
-    glVertex2f(cos(deg2rad(162)) * 100 + 250, sin(deg2rad(162)) * 100 + 250);
-    glVertex2f(cos(deg2rad(306)) * 100 + 250, sin(deg2rad(306)) * 100 + 250);
-    
     glEnd();
-
-    /*
-    glColor3f(1.0f, 1.0f, 0.0f);
-    glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
-    glBegin(GL_POLYGON);
-    glVertex2f(cos(deg2rad(90)) * 100 + 250, sin(deg2rad(90)) * 100 + 250);
-    glVertex2f(cos(deg2rad(162)) * 100 + 250, sin(deg2rad(162)) * 100 + 250);
-    glVertex2f(cos(deg2rad(234)) * 100 + 250, sin(deg2rad(234)) * 100 + 250);
-    glVertex2f(cos(deg2rad(306)) * 100 + 250, sin(deg2rad(306)) * 100 + 250);
-    glVertex2f(cos(deg2rad(378)) * 100 + 250, sin(deg2rad(378)) * 100 + 250);
-    glEnd();
-
-    glColor3f(0.2f, 1.0f, 0.2f);
-    glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-    glBegin(GL_POLYGON);
-    glVertex2f(cos(deg2rad(90)) * 100 + 250, sin(deg2rad(90)) * 100 + 250);
-    glVertex2f(cos(deg2rad(162)) * 100 + 250, sin(deg2rad(162)) * 100 + 250);
-    glVertex2f(cos(deg2rad(234)) * 100 + 250, sin(deg2rad(234)) * 100 + 250);
-    glVertex2f(cos(deg2rad(306)) * 100 + 250, sin(deg2rad(306)) * 100 + 250);
-    glVertex2f(cos(deg2rad(378)) * 100 + 250, sin(deg2rad(378)) * 100 + 250);
-    glEnd();
-
-    
     */
+
+    //별그리기 2: GL_LINE_LOOP을 사용
+    //glColor3f(0.2f, 1.0f, 0.2f);
+    //glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+    //glBegin(GL_POLYGON);
+
+    //glVertex2f(cos(deg2rad(90)) * 100 + 250, sin(deg2rad(90)) * 100 + 250);
+    //glVertex2f(cos(deg2rad(234)) * 100 + 250, sin(deg2rad(234)) * 100 + 250);
+    //glVertex2f(cos(deg2rad(378)) * 100 + 250, sin(deg2rad(378)) * 100 + 250);
+    //glVertex2f(cos(deg2rad(162)) * 100 + 250, sin(deg2rad(162)) * 100 + 250);
+    //glVertex2f(cos(deg2rad(306)) * 100 + 250, sin(deg2rad(306)) * 100 + 250);
+    //
+    //glEnd();
+
+    
+
+    ////오각형그리기
+    //glColor3f(1.0f, 1.0f, 0.0f);
+    //glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+    //glBegin(GL_POLYGON);
+    //glVertex2f(cos(deg2rad(90)) * 100 + 250, sin(deg2rad(90)) * 100 + 250);
+    //glVertex2f(cos(deg2rad(162)) * 100 + 250, sin(deg2rad(162)) * 100 + 250);
+    //glVertex2f(cos(deg2rad(234)) * 100 + 250, sin(deg2rad(234)) * 100 + 250);
+    //glVertex2f(cos(deg2rad(306)) * 100 + 250, sin(deg2rad(306)) * 100 + 250);
+    //glVertex2f(cos(deg2rad(378)) * 100 + 250, sin(deg2rad(378)) * 100 + 250);
+    //glEnd();
+
+    //glColor3f(0.2f, 1.0f, 0.2f);
+    //glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+    //glBegin(GL_POLYGON);
+    //glVertex2f(cos(deg2rad(90)) * 100 + 250, sin(deg2rad(90)) * 100 + 250);
+    //glVertex2f(cos(deg2rad(162)) * 100 + 250, sin(deg2rad(162)) * 100 + 250);
+    //glVertex2f(cos(deg2rad(234)) * 100 + 250, sin(deg2rad(234)) * 100 + 250);
+    //glVertex2f(cos(deg2rad(306)) * 100 + 250, sin(deg2rad(306)) * 100 + 250);
+    //glVertex2f(cos(deg2rad(378)) * 100 + 250, sin(deg2rad(378)) * 100 + 250);
+    //glEnd();
+
+    //
+    //
 
 
     
